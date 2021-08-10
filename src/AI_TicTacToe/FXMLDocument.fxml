@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="367.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AI_TicTacToe.FXMLDocumentController">
+    <children>
+        <Label fx:id="lblresult" focusTraversable="false" layoutX="155.0" layoutY="39.0" minHeight="16" minWidth="69" prefHeight="61.0" prefWidth="172.0" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label fx:id="lblTitle" alignment="CENTER" contentDisplay="CENTER" layoutX="180.0" prefHeight="39.0" prefWidth="123.0" text="Tic Tac Toe" textAlignment="CENTER">
+         <font>
+            <Font name="PT Serif" size="22.0" />
+         </font></Label>
+      <TextField fx:id="txtXWins" editable="false" layoutX="286.0" layoutY="136.0" prefHeight="39.0" prefWidth="131.0" text="X wins : ">
+         <effect>
+            <InnerShadow height="11.0" radius="5.0" width="11.0" />
+         </effect></TextField>
+      <TextField fx:id="txtOWins" layoutX="286.0" layoutY="182.0" prefHeight="39.0" prefWidth="131.0" text="O wins :">
+         <effect>
+            <InnerShadow height="11.0" radius="5.0" width="11.0" />
+         </effect></TextField>
+      <Button fx:id="btnQuit" layoutX="38.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleButtonQuitAction" prefHeight="39.0" prefWidth="84.0" text="Quit" textAlignment="CENTER" textFill="RED">
+         <effect>
+            <Reflection fraction="0.5" />
+         </effect>
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnReset" layoutX="334.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleButtonResetAction" prefHeight="39.0" prefWidth="110.0" text="Reset Game" textFill="RED">
+         <effect>
+            <Reflection fraction="0.5" />
+         </effect>
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Button>
+      <TextField fx:id="txtDraws" editable="false" layoutX="286.0" layoutY="228.0" prefHeight="39.0" prefWidth="131.0" text="Draw :">
+         <effect>
+            <InnerShadow height="11.0" radius="5.0" width="11.0" />
+         </effect></TextField>
+      <Group fx:id="wholeBoard" focusTraversable="true" layoutX="26.0">
+         <children>
+            <Button fx:id="btnPos21" layoutX="83.0" layoutY="203.0" mnemonicParsing="false" onAction="#pos21ButtonAction" prefHeight="49.0" prefWidth="52.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btnPos20" layoutX="31.0" layoutY="203.0" mnemonicParsing="false" onAction="#pos20ButtonAction" prefHeight="49.0" prefWidth="52.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btnPos22" layoutX="135.0" layoutY="203.0" mnemonicParsing="false" onAction="#pos22ButtonAction" prefHeight="49.0" prefWidth="52.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btnPos12" layoutX="135.0" layoutY="155.0" mnemonicParsing="false" onAction="#pos12ButtonAction" prefHeight="49.0" prefWidth="52.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btnPos00" layoutX="31.0" layoutY="107.0" mnemonicParsing="false" onAction="#pos00ButtonAction" prefHeight="49.0" prefWidth="52.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btnPos01" layoutX="83.0" layoutY="107.0" mnemonicParsing="false" onAction="#pos01ButtonAction" prefHeight="49.0" prefWidth="52.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btnPos02" layoutX="135.0" layoutY="107.0" mnemonicParsing="false" onAction="#pos02ButtonAction" prefHeight="49.0" prefWidth="52.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btnPos11" layoutX="83.0" layoutY="155.0" mnemonicParsing="false" onAction="#pos11ButtonAction" prefHeight="49.0" prefWidth="52.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btnPos10" layoutX="31.0" layoutY="155.0" mnemonicParsing="false" onAction="#pos10ButtonAction" prefHeight="49.0" prefWidth="52.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="15.0" radius="7.0" width="15.0" />
+         </effect>
+      </Group>
+      <CheckBox fx:id="chkbxOpponent" layoutX="286.0" layoutY="102.0" mnemonicParsing="false" onAction="#chkbxOpponentAction" prefHeight="18.0" prefWidth="164.0" text="Play against computer" textFill="BLUE">
+         <font>
+            <Font name="Optima Regular" size="14.0" />
+         </font></CheckBox>
+      <Button fx:id="btnClearBoard" layoutX="179.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleButtonResetBoardAction" prefHeight="39.0" prefWidth="102.0" text="Clear Board" textFill="RED">
+         <effect>
+            <Reflection fraction="0.5" />
+         </effect>
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
